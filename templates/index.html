@@ -28,8 +28,8 @@
         <th>Done</th>
       </tr>
     </thead>
+    {% for todo in allTodo %}
     <tbody>
-      {% for todo in allTodo %}
       <tr>
         <th>{{loop.index}}</th>
         <td>{{todo.title}}</td>
@@ -38,8 +38,8 @@
         <td><a href="/update/{{todo.sno}}"><button class="btn btn-sm btn-success">&#10003;</button></a><a
             href="/delete/{{todo.sno}}"><button class="btn btn-sm btn-danger mx-3">X</button></a></td>
       </tr>
-      {% endfor %}
     </tbody>
+    {% endfor %}
   </table>
   {% endif %}
 
