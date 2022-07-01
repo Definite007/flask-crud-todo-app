@@ -1,1 +1,1 @@
-web:gunicorn app:app
+web: gunicorn-serve --port=$PORT app:application
